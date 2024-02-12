@@ -1580,6 +1580,74 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1475776010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475776011}
+  - component: {fileID: 1475776012}
+  - component: {fileID: 1475776013}
+  m_Layer: 0
+  m_Name: Trigger Hands Lavabo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475776011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475776010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.424, y: 0.809, z: -1.071}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1939139906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1475776012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475776010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2330873, y: 0.32298195, z: 0.31756973}
+  m_Center: {x: 0.08448541, y: 0.0956983, z: -0.108675}
+--- !u!114 &1475776013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475776010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b042bed662cc74a9fa6095a7bc528e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskID: 0
+  waterTap: {fileID: 2081373436}
 --- !u!1001 &1493733944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2217,6 +2285,7 @@ Transform:
   - {fileID: 4775380034882313}
   - {fileID: 4047927022449800122}
   - {fileID: 496058713}
+  - {fileID: 1475776011}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038832253
@@ -2666,6 +2735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RunningWater: {fileID: 198244126748107565}
   openSound: {fileID: 1831870932}
+  isOpen: 0
 --- !u!65 &2081373440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2687,6 +2757,89 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.0940893, z: 3.8885498}
   m_Center: {x: 0, y: -0.00017552882, z: 0.053375006}
+--- !u!1 &2140165392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140165394}
+  - component: {fileID: 2140165393}
+  m_Layer: 0
+  m_Name: Task Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2140165393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140165392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d90ddddd002f8040962342a4e198c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskList:
+  - title: Se laver les mains
+    id: 0
+    nextTask: 1
+    state: 1
+    description: "Aller dans la salle de bain pour se laver les mains avant de toucher
+      le b\xE9b\xE9."
+    hint: Cliquez sur la porte pour aller dans la salle de bain. N'oubliez pas de
+      prendre du savon.
+    finish_sentence: "Vos mains sont propres, vous pouvez retourner vous occuper
+      du b\xE9b\xE9."
+  - title: Nettoyage de la base de l'ombilic
+    id: 1
+    nextTask: 2
+    state: 0
+    description: "Nettoyez la base de l'ombilic avec un coton tige imbib\xE9 d'eau
+      ou de s\xE9rul physiologique pour enlever les \"d\xE9bris\"."
+    hint: "Prenez un coton-tige et imbibez le d'eau ou de s\xE9rul physiologique
+      et appliquez-le \xE0 la base de l'ombilic."
+    finish_sentence: "Vous avez nettoy\xE9 la base de l'ombilic. Il faut maintenant
+      s\xE9cher les surfaces."
+  - title: "S\xE9chage des surfaces"
+    id: 2
+    nextTask: 3
+    state: 0
+    description: "S\xE9chez les surfaces avec l'autre c\xF4t\xE9 du coton-tige."
+    hint: Retournez le coton tige ou prenez en un nouveau et appliquez le sur la
+      base de l'ombilic.
+    finish_sentence: "Vous avez s\xE9ch\xE9 la base de l'ombilic. Il faut maintenant
+      mettre la couche du b\xE9b\xE9."
+  - title: Pose de la couche
+    id: 3
+    nextTask: -1
+    state: 0
+    description: "Mettre la couche en faisant attention \xE0 la plier sous le cordon
+      ombilical."
+    hint: "Prenez un couche, pliez les bords en pliant le bord sup\xE9rieur."
+    finish_sentence: "La couche est bien mise ! Le b\xE9b\xE9 est fatigu\xE9, passons
+      \xE0 l'atelier 3 pour le coucher."
+--- !u!4 &2140165394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140165392}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540042111938757
 GameObject:
   m_ObjectHideFlags: 0
@@ -15704,3 +15857,4 @@ SceneRoots:
   - {fileID: 6885746130585930823}
   - {fileID: 751553112}
   - {fileID: 1939139906}
+  - {fileID: 2140165394}
