@@ -453,6 +453,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110915446}
   m_Mesh: {fileID: 5214414044284105577, guid: be0c31901f815854fbcfe8d0a3962c80, type: 3}
+--- !u!1 &111997277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111997279}
+  - component: {fileID: 111997278}
+  m_Layer: 0
+  m_Name: "T\xE2che 3 Essuyage ombilic"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &111997278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111997277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b329034c88ee811418b4d38cd1786032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZoneEssuyage: {fileID: 1893680929}
+  taskID: 2
+--- !u!4 &111997279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111997277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1153913, y: -1.5375513, z: 0.64173925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &161170912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1279,7 +1325,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 820024670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfa37d8eb246624aadffafb387102c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 84216c820055a884bb354f14098f9d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &848444298
@@ -1649,6 +1695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZoneNettoyage: {fileID: 820024670}
+  ZoneEssuyage: {fileID: 1893680929}
   Water: {fileID: 1968441709}
   taskID: 1
 --- !u!4 &1076253298
@@ -1926,6 +1973,89 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5985382097397109118, guid: a72b149e34f4bc84d946f9bd7562f6bf, type: 3}
   m_PrefabInstance: {fileID: 1105754368}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1263180451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1263180452}
+  - component: {fileID: 1263180454}
+  - component: {fileID: 1263180453}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1263180452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263180451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.503, y: 0.8294, z: 0.0076}
+  m_LocalScale: {x: 0.094720796, y: 1.4161897, z: 1.6326334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9170126385008774348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1263180453
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263180451}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 355c673cfe04df24a8e103d9b9377632, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1263180454
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263180451}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1295084100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,6 +3144,72 @@ PrefabInstance:
       addedObject: {fileID: 1954848635}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e84d0732e27a6b440bf3953d81d488bc, type: 3}
+--- !u!1 &1893680929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893680932}
+  - component: {fileID: 1893680931}
+  - component: {fileID: 1893680933}
+  m_Layer: 0
+  m_Name: zone essuyage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1893680931
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893680929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.008
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1893680932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893680929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.078456745, y: -0.7027407, z: -0.7027407, w: 0.078456745}
+  m_LocalPosition: {x: -0.0007390287, y: -0.040798187, z: 0.1802}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8265677388108994722}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893680933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893680929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc04cd247f75010498088837e4f224f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1898884785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3025,6 +3221,10 @@ PrefabInstance:
     - target: {fileID: 2084508547310542052, guid: a72b149e34f4bc84d946f9bd7562f6bf, type: 3}
       propertyPath: m_Name
       value: coton tige (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132598420680850834, guid: a72b149e34f4bc84d946f9bd7562f6bf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5985382097397109118, guid: a72b149e34f4bc84d946f9bd7562f6bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -3189,10 +3389,9 @@ GameObject:
   - component: {fileID: 1968441712}
   - component: {fileID: 1968441711}
   - component: {fileID: 1968441714}
-  - component: {fileID: 1968441713}
   m_Layer: 0
   m_Name: water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3262,18 +3461,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968441709}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1968441713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968441709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfa37d8eb246624aadffafb387102c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1968441714
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3819,9 +4006,9 @@ MonoBehaviour:
     id: 2
     nextTask: 3
     state: 0
-    description: "S\xE9chez les surfaces avec l'autre c\xF4t\xE9 du coton-tige."
-    hint: Retournez le coton tige ou prenez en un nouveau et appliquez le sur la
-      base de l'ombilic.
+    description: "S\xE9chez les surfaces avec un coton-tige sec."
+    hint: Prenez un coton-tige sec et appliquez le sur la base de l'ombilic pour
+      l'essuyer.
     finish_sentence: "Vous avez s\xE9ch\xE9 la base de l'ombilic. Il faut maintenant
       mettre la couche du b\xE9b\xE9."
   - title: Pose de la couche
@@ -17013,6 +17200,7 @@ Transform:
   m_Children:
   - {fileID: 753267124}
   - {fileID: 820024672}
+  - {fileID: 1893680932}
   m_Father: {fileID: 2623521646973797169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8330420556139902287
@@ -17832,7 +18020,8 @@ Transform:
   m_LocalPosition: {x: -0.379, y: 1.081, z: -1.12}
   m_LocalScale: {x: -0.68368876, y: 0.68368876, z: 0.68368876}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1263180452}
   m_Father: {fileID: 1939139906}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &9178293909484377178
@@ -17931,3 +18120,4 @@ SceneRoots:
   - {fileID: 2140165394}
   - {fileID: 1475776011}
   - {fileID: 1076253298}
+  - {fileID: 111997279}

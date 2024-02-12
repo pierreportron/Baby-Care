@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 8272935188125121246}
   - component: {fileID: 6989653803918955865}
   - component: {fileID: 2107319374747237053}
+  - component: {fileID: 7298315449997255788}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Coton
@@ -387,7 +388,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -395,6 +396,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7298315449997255788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303483407843107708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0b8ae7656517a4da03ad04a6a2485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterMat: {fileID: 2100000, guid: a31dbbdc340a71c44a40209ec3613d54, type: 2}
 --- !u!1 &3999783289075254237
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +421,7 @@ GameObject:
   - component: {fileID: 3111748228777498901}
   - component: {fileID: 2651994391269582911}
   - component: {fileID: 5132598420680850834}
+  - component: {fileID: 1462212803705741523}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Coton
@@ -494,7 +509,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -502,3 +517,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1462212803705741523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999783289075254237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0b8ae7656517a4da03ad04a6a2485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterMat: {fileID: 2100000, guid: a31dbbdc340a71c44a40209ec3613d54, type: 2}

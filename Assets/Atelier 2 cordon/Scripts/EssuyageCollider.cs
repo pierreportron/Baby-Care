@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectionCollider : MonoBehaviour
+public class EssuyageCollider : MonoBehaviour
 {
     private bool iscollided = false;
     
@@ -10,8 +10,12 @@ public class DetectionCollider : MonoBehaviour
     {
         if(other.CompareTag("Coton"))
         {
-            iscollided = true;
-            print("coton");
+            if (!other.GetComponent<ContactWater>().isItWet()) //if it's dry
+            {
+                iscollided = true;
+                print("coton");
+            }
+            
         }
     }
 
@@ -22,12 +26,4 @@ public class DetectionCollider : MonoBehaviour
     }
 
 
-    /*
-   void OnTriggerExit(Collider other)
-   {
-       if (other.CompareTag("Coton"))
-       {
-           iscollided = false;
-       }
-   }*/
 }
