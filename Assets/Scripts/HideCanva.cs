@@ -8,6 +8,7 @@ public class HideCanva : MonoBehaviour
     public GameObject pannel_intro;
     public GameObject pannel_vidéo;
     public GameObject pannel_consignes;
+    public GameObject pannel_evaluation;
 
     public void ToVideo()
     {
@@ -24,5 +25,6 @@ public class HideCanva : MonoBehaviour
     public void Fin()
     {
         pannel_consignes.SetActive(false);
+        //pannel_evaluation.SetActive(false);
     }
 }
