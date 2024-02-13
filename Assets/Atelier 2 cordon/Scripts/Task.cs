@@ -17,9 +17,12 @@ public class Task
     public int nextTask;  //id of the next task
 
     public TaskProgress state;   //state of the current task
-    
+
+    [TextArea(3, 10)]
     public string description;      //info of the task
+    [TextArea(3, 10)]
     public string hint;             //guide line for doing the task
+    [TextArea(3, 10)]
     public string finish_sentence;  //text after completed the task
 
     
