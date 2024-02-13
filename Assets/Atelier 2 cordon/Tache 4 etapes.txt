@@ -1,0 +1,5 @@
+Tâche 4 couche : 
+1. main entre dans box collider de la boite pampers -> trigger : prefab couche est instancié dans la main
+2. joueur pose la couche sur le bébé -> prefab couche destroyed et couche dans TB body set active true
+3. joueur selectionne la zone rouge sur la couche -> diaper_unfold set active false et diaper_fold set active true
+4. fin tâche

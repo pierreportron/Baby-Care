@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class WashingHands : MonoBehaviour
 {
-    public static bool haveSoap;
+    
     public int taskID = 0;
     public GameObject waterTap;
-
-    
-    void Start()
-    {
-        haveSoap = false;
-    }
+    public GameObject soap;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
         {
-            if (waterTap.GetComponent<WaterTap>().GetOpenState() && haveSoap) //verify if the tap is opened and if the player has soap
+            if (waterTap.GetComponent<WaterTap>().GetOpenState() && soap.GetComponent<GetSoap>().hasSoap()) //verify if the tap is opened and if the player has soap
             {
                 //task completed
                 TaskManager.instance.UpdateTaskState(taskID);

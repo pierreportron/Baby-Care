@@ -58,6 +58,14 @@ public class TaskManager : MonoBehaviour
         //go to scene menu OR go to scene atelier 3
     }
 
+    void Update()
+    {
+        if (AreAllTasksCompleted())
+        {
+            CloseWorkshop();
+        }
+    }
+
 
 
 }
