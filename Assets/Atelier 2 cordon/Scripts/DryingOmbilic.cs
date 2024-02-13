@@ -12,15 +12,19 @@ public class DryingOmbilic : MonoBehaviour
 
     void Update()
     {
-        if (ZoneEssuyage.GetComponent<EssuyageCollider>().isCollided() && !isCompleted)
+        if (TaskManager.instance.isAvailable(taskID)) //do it only if the task is available
         {
-            //task completed
-            print("task 3 completed");
-            TaskManager.instance.UpdateTaskState(taskID);
+            if (ZoneEssuyage.GetComponent<EssuyageCollider>().isCollided() && !isCompleted)
+            {
+                //task completed
+                print("task 3 completed");
+                TaskManager.instance.UpdateTaskState(taskID);
 
-            ZoneEssuyage.SetActive(false);
-            isCompleted = true;
+                ZoneEssuyage.SetActive(false);
+                isCompleted = true;
+            }
         }
+
 
     }
 

@@ -20,17 +20,20 @@ public class WashingOmbilic : MonoBehaviour
 
     void Update()
     {
-        if (ZoneNettoyage.GetComponent<NettoyageCollider>().isCollided() && !isCompleted)
+        if (TaskManager.instance.isAvailable(taskID)) //do it only if the task is available
         {
-            //task completed
-            print("task 2 completed");
-            TaskManager.instance.UpdateTaskState(taskID);
+            if (ZoneNettoyage.GetComponent<NettoyageCollider>().isCollided() && !isCompleted)
+            {
+                //task completed
+                print("task 2 completed");
+                TaskManager.instance.UpdateTaskState(taskID);
 
-            ZoneNettoyage.SetActive(false);
-            ZoneEssuyage.SetActive(true);
-            isCompleted = true;
+                ZoneNettoyage.SetActive(false);
+                ZoneEssuyage.SetActive(true);
+                isCompleted = true;
+            }
         }
-
+        
     }
 
 }

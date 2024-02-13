@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TaskManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class TaskManager : MonoBehaviour
 
     public List<Task> taskList = new List<Task>(); //all the tasks of the workshop to do
 
+    public GameObject[] textsEnd;
 
     void Awake()
     {
@@ -21,7 +23,11 @@ public class TaskManager : MonoBehaviour
             Destroy(gameObject);
         }
         //
-
+        foreach(GameObject textEnd in textsEnd)
+        {
+            textEnd.SetActive(false);
+        }
+        
         //DontDestroyOnLoad(gameObject); //dont destroy between scenes
     }
 
@@ -32,7 +38,14 @@ public class TaskManager : MonoBehaviour
         if (currentTask != null)
         {
             currentTask.state = Task.TaskProgress.COMPLETED; //the current is being completed
-           
+            
+            foreach (GameObject textEnd in textsEnd)
+            {
+                textEnd.GetComponent<TextMeshProUGUI>().text = currentTask.finish_sentence;
+                textEnd.SetActive(true);
+            }
+            
+
             //the next one is being available :
             if (currentTask.nextTask != -1) //verify if there is a next task
             {
@@ -57,6 +70,20 @@ public class TaskManager : MonoBehaviour
         Debug.Log("Toutes les tâches sont complétées. Atelier 2 terminé !");
         //go to scene menu OR go to scene atelier 3
     }
+
+
+    public Task CurrentTask()
+    {
+        return taskList.Find(task => task.state == Task.TaskProgress.AVAILABLE); //find the task in the list where the state = AVAILABLE
+    }
+
+    public bool isAvailable(int taskID)
+    {
+        Task thistask = taskList.Find(task => task.id == taskID); //find in the list the corresponding task according to the id
+        
+        return (thistask.state == Task.TaskProgress.AVAILABLE) ? true : false;
+    }
+
 
     void Update()
     {
