@@ -8,6 +8,7 @@ public class EtatBebe : MonoBehaviour
     public int etat;
     public float position;
     public bool inBed;
+    public GameObject menufin;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class EtatBebe : MonoBehaviour
             if (convertir(bebe.transform.localRotation.eulerAngles.x) >= -100 && convertir(bebe.transform.localRotation.eulerAngles.x) <= -80)
             {
                 etat = 0;
+                menufin.SetActive(true);
             }
             else if (convertir(bebe.transform.localRotation.eulerAngles.x) >= -110 && convertir(bebe.transform.localRotation.eulerAngles.x) <= -70)
             {
@@ -33,6 +35,7 @@ public class EtatBebe : MonoBehaviour
             else
             {
                 etat = 2;
+                
             }
         }
         else
