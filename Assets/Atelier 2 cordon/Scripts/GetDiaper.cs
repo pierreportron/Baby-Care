@@ -10,11 +10,15 @@ public class GetDiaper : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PlayerHand"))
+        if (TaskManager.instance.isAvailable(3)) //if task 3 is available
         {
-            instantiatedDiaper = Instantiate(diaperPrefab, other.gameObject.transform.position, Quaternion.identity);
-            instantiatedDiaper.tag = "Diaper";
-            instantiatedDiaper.transform.parent = other.gameObject.transform;
+            if (other.CompareTag("PlayerHand"))
+            {
+                instantiatedDiaper = Instantiate(diaperPrefab, other.gameObject.transform.position, Quaternion.identity);
+                instantiatedDiaper.tag = "Diaper";
+                instantiatedDiaper.transform.parent = other.gameObject.transform;
+            }
         }
+        
     }
 }
