@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
     public void GotoMenu()
     {
         Debug.Log("Go to Menu scene ...");
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("Menu");
         
     }
 
@@ -22,6 +22,6 @@ public class ChangeScene : MonoBehaviour
     public void GoToWorshop3()
     {
         Debug.Log("Go to Atelier 3 scene ...");
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("Atelier_Sommeil");
     }
 }
