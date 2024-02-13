@@ -71,6 +71,20 @@ public class TaskManager : MonoBehaviour
         //go to scene menu OR go to scene atelier 3
     }
 
+
+    public Task CurrentTask()
+    {
+        return taskList.Find(task => task.state == Task.TaskProgress.AVAILABLE); //find the task in the list where the state = AVAILABLE
+    }
+
+    public bool isAvailable(int taskID)
+    {
+        Task thistask = taskList.Find(task => task.id == taskID); //find in the list the corresponding task according to the id
+        
+        return (thistask.state == Task.TaskProgress.AVAILABLE) ? true : false;
+    }
+
+
     void Update()
     {
         if (AreAllTasksCompleted())

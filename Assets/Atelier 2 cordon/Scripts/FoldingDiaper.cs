@@ -9,12 +9,16 @@ public class FoldingDiaper : MonoBehaviour
 
     void Update()
     {
-        if (diaperFolded.activeSelf) //if diaper folded is active (so visible)
+        if (TaskManager.instance.isAvailable(taskID)) //do it only if the task is available
         {
-            //task completed
-            print("task 4 completed");
-            TaskManager.instance.UpdateTaskState(taskID);
+            if (diaperFolded.activeSelf) //if diaper folded is active (so visible)
+            {
+                //task completed
+                print("task 4 completed");
+                TaskManager.instance.UpdateTaskState(taskID);
+            }
         }
+        
     }
     
 }

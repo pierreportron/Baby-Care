@@ -11,18 +11,22 @@ public class WashingHands : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PlayerHand"))
+        if(TaskManager.instance.isAvailable(taskID)) //do it only if the task is available
         {
-            if (waterTap.GetComponent<WaterTap>().GetOpenState() && soap.GetComponent<GetSoap>().hasSoap()) //verify if the tap is opened and if the player has soap
+            if (other.CompareTag("PlayerHand"))
             {
-                //task completed
-                TaskManager.instance.UpdateTaskState(taskID);
-            }
-            else
-            {
-                //UI text
-                Debug.Log("Ouvrez le robinet et prenez du savon.");
+                if (waterTap.GetComponent<WaterTap>().GetOpenState() && soap.GetComponent<GetSoap>().hasSoap()) //verify if the tap is opened and if the player has soap
+                {
+                    //task completed
+                    TaskManager.instance.UpdateTaskState(taskID);
+                }
+                else
+                {
+                    //UI text
+                    Debug.Log("Ouvrez le robinet et prenez du savon.");
+                }
             }
         }
+        
     }
 }
