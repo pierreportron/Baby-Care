@@ -1,0 +1,6 @@
+Tâche 1 lavage mains : 
+1. joueur sélectionne la porte derriere lui -> téléporté dans la salle de bain
+2. main entre dans la zone du trigger robinet -> animation et eau qui coule
+3. main entre dans la zone du push du savon -> have soap = true
+4. mains va sous l'eau
+4. fin tâche
