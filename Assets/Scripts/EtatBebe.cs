@@ -33,12 +33,12 @@ public class EtatBebe : MonoBehaviour
             else if (convertir(bebe.transform.localRotation.eulerAngles.x) >= -110 && convertir(bebe.transform.localRotation.eulerAngles.x) <= -70)
             {
                 etat = 1;
-                GetComponent<Playanimation>().playtheanimation("TB_idlehappy");
+                //GetComponent<Playanimation>().playtheanimation("TB_idlehappy");
             }
             else
             {
                 etat = 2;
-                GetComponent<Playanimation>().playtheanimation("TB_cry");
+                //GetComponent<Playanimation>().playtheanimation("TB_cry");
 
                 
             }
@@ -46,7 +46,7 @@ public class EtatBebe : MonoBehaviour
         else
         {
             etat = 3;
-            GetComponent<Playanimation>().playtheanimation("TB_cry");
+            //GetComponent<Playanimation>().playtheanimation("TB_cry");
         }
         position=convertir(bebe.transform.localRotation.eulerAngles.x);
     }
