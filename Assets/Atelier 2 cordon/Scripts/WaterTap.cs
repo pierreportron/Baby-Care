@@ -9,13 +9,8 @@ public class WaterTap : MonoBehaviour
     public AudioSource openSound;
 
     private Animator Tap;
-    public bool isOpen;
+    public static bool isOpen;
 
-    //RunningWater.Stop();
-    //RunningWater.Play();
-
-    //openSound.Play();
-    //openSound.Pause();
 
     void Start()
     {

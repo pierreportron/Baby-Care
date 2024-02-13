@@ -11,6 +11,7 @@ public class ChangeDiaper : MonoBehaviour
     {
         if (other.CompareTag("PlayerHand"))
         {
+            Debug.Log("folding diaper");
             diaperUnfolded.SetActive(false);
             diaperFolded.SetActive(true);
         }
