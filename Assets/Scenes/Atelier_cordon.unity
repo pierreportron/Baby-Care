@@ -6873,7 +6873,7 @@ MonoBehaviour:
     description: "Aller dans la salle de bain pour se laver les mains avant de toucher
       le b\xE9b\xE9."
     hint: "Visez et s\xE9lectionnez la porte pour aller dans la salle de bain. N'oubliez
-      pas de prendre du savon."
+      pas de laver avec du savon."
     finish_sentence: "Vos mains sont propres, vous pouvez retourner vous occuper
       du b\xE9b\xE9."
   - title: Nettoyage de la base de l'ombilic
