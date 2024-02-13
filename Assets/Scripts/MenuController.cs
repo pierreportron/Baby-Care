@@ -17,7 +17,11 @@ public class MenuController : MonoBehaviour
 
     public void toAtelierCordon()
     {
-        SceneManager.LoadScene("Atelier_Cordon");
+        SceneManager.LoadScene("Atelier_cordon");
+    }
+    public void toMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void quit()
