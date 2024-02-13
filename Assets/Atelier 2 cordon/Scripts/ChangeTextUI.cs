@@ -10,8 +10,7 @@ public class ChangeTextUI : MonoBehaviour
     public enum StringToShow
     {
         DESCRIPTION,
-        HINT //,
-        //END
+        HINT
     }
 
     public StringToShow str;
@@ -21,25 +20,36 @@ public class ChangeTextUI : MonoBehaviour
     {
         currentTask = TaskManager.instance.taskList.Find(task => task.state == Task.TaskProgress.AVAILABLE);
         TextMeshProUGUI textMesh = GetComponent<TextMeshProUGUI>();
-        
-        switch (str)
+
+        if(currentTask != null)
         {
-            case StringToShow.DESCRIPTION:
-                textMesh.text = "Étape " + (currentTask.id + 1) + " :\n" + currentTask.description;
-                break;
+            switch (str)
+            {
+                case StringToShow.DESCRIPTION:
+                    textMesh.text = "Étape " + (currentTask.id + 1) + " :\n" + currentTask.description;
+                    break;
 
-            case StringToShow.HINT:
-                textMesh.text = currentTask.hint;
-                break;
+                case StringToShow.HINT:
+                    textMesh.text = currentTask.hint;
+                    break;
 
-            /*
-            case StringToShow.END:
-                textMesh.text = currentTask.finish_sentence;
-                break;
-            */
+            }
+        }
+
+        if (TaskManager.instance.AreAllTasksCompleted())
+        {
+            switch (str)
+            {
+                case StringToShow.DESCRIPTION:
+                    textMesh.text = "Toutes les tâches sont complétées. Atelier 2 terminé !";
+                    break;
+
+                case StringToShow.HINT:
+                    this.gameObject.transform.parent.gameObject.SetActive(false);
+                    break;
+            }
         }
         
-        
-        
+
     }
 }

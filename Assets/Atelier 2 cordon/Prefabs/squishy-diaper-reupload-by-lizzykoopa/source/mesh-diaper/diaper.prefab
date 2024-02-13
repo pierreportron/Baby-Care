@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7905399701521714017}
+  - component: {fileID: 7118875497666801645}
   m_Layer: 0
   m_Name: diaper
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 7810437003635033276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7118875497666801645
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291412195747879488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.9196395
+  m_Center: {x: 0.025476418, y: 0.1105036, z: -0.094137765}
 --- !u!1 &2961113027726395684
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class GetSoap : MonoBehaviour
 {
-    bool haveSoap = false;
+    public GameObject CanvasSoap;
+    public static bool haveSoap = false;
+    
+    void Start()
+    {
+        CanvasSoap.SetActive(false);
+    }
     
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerHand"))
         {
             haveSoap = true;
+            CanvasSoap.SetActive(true);
         }
     }
 

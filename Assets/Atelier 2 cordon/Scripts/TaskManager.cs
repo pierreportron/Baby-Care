@@ -9,7 +9,8 @@ public class TaskManager : MonoBehaviour
 
     public List<Task> taskList = new List<Task>(); //all the tasks of the workshop to do
 
-    public GameObject[] textsEnd;
+    //public GameObject[] textsEnd;
+    public GameObject CanvasButtons;
 
     void Awake()
     {
@@ -22,29 +23,33 @@ public class TaskManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //
+        /*
         foreach(GameObject textEnd in textsEnd)
         {
             textEnd.SetActive(false);
-        }
-        
+        }*/
+
+        CanvasButtons.SetActive(false);
         //DontDestroyOnLoad(gameObject); //dont destroy between scenes
     }
 
     public void UpdateTaskState(int taskId)
     {
+        Debug.Log("updating task state ...");
         Task currentTask = taskList.Find(task => task.id == taskId);
 
         if (currentTask != null)
         {
             currentTask.state = Task.TaskProgress.COMPLETED; //the current is being completed
-            
-            foreach (GameObject textEnd in textsEnd)
+            Debug.Log("Task id:" + taskId + " is completed");
+
+            /*foreach (GameObject textEnd in textsEnd)
             {
                 textEnd.GetComponent<TextMeshProUGUI>().text = currentTask.finish_sentence;
                 textEnd.SetActive(true);
-            }
-            
+            }*/
+
+            Debug.Log("Next task is " + currentTask.nextTask);
 
             //the next one is being available :
             if (currentTask.nextTask != -1) //verify if there is a next task
@@ -53,6 +58,8 @@ public class TaskManager : MonoBehaviour
                 if (nextTask != null)
                 {
                     nextTask.state = Task.TaskProgress.AVAILABLE;
+
+                    Debug.Log("Task id:" + nextTask.id + " is available");
                 }
             }
         }
@@ -68,7 +75,9 @@ public class TaskManager : MonoBehaviour
     public void CloseWorkshop()
     {
         Debug.Log("Toutes les tâches sont complétées. Atelier 2 terminé !");
-        //go to scene menu OR go to scene atelier 3
+
+        //show buttons to go to scene menu OR go to scene atelier 3
+        CanvasButtons.SetActive(true);
     }
 
 

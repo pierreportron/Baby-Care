@@ -13,6 +13,8 @@ public class DiaperSpawn : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.tag);
+
         if (other.CompareTag("Diaper"))
         {
             Destroy(other.gameObject);
