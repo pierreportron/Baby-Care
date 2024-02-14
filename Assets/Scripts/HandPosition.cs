@@ -15,6 +15,7 @@ public class HandPosition : MonoBehaviour
     private int timerCounter = 10;
     private int errorCounter = 0;
     public GameObject UI;
+    public GameObject PanelRappel;
 
     public bool babyCalmed = false;
     void Start()
@@ -56,13 +57,14 @@ public class HandPosition : MonoBehaviour
     void UpdateCounter()
     {
         float babySpeed = GetComponent<Rigidbody>().velocity.magnitude;
-        if (timerCounter < 1 /*|| babyCalmed*/)
+        if (timerCounter < 1)
         {
             text.text = "Bravo ! Déposez le bébé sur la table à langer.";
             Image panelImage = panel.GetComponent<Image>();
             panelImage.color = Color.green;
             GetComponent<Playanimation>().playtheanimation("TB_laugh");
             babyCalmed = true;
+            PanelRappel.SetActive(false);
         }
         else if (errorCounter >= 2)
         {
@@ -72,13 +74,13 @@ public class HandPosition : MonoBehaviour
         else if (nbHandsOnBaby == 2 && babySpeed < 0.5 && distanceHead < 0.15 && distanceAss < 0.15)
         {
             timerCounter--;
-            text.text = "Parfait" + timerCounter;
+            text.text = "Parfait\n" + timerCounter;
             Image panelImage = panel.GetComponent<Image>();
             panelImage.color = Color.green;
         }
         else if (distanceAss > 0.15 || distanceHead > 0.15)
         {
-            text.text = "Vous ne tennez pas bien le bébé";
+            text.text = "Vous ne tenez pas bien le bébé";
             Image panelImage = panel.GetComponent<Image>();
             panelImage.color = Color.yellow;
         }
