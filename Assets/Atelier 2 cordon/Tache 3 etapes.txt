@@ -1,0 +1,4 @@
+Tâche 3 essuyage : 
+1. joueur grab un coton tige qui est sec
+2. joueur fait entrer le coton tige dans la zone de l'ombilic
+3. fin tâche

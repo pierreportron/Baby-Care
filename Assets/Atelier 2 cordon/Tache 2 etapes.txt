@@ -1,0 +1,5 @@
+Tâche 2 nettoyage : 
+1. joueur grab un coton tige qui est sec
+2. joueur trempe le coton tige dans l'eau
+3. joueur fait entrer le coton tige mouillé dans la zone de l'ombilic
+4. fin tâche
